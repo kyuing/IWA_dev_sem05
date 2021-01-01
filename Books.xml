@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<books>
+  <section name="Fiction">
+    <entree>
+      <id>dcf86959</id>
+      <title>Hunger Game</title>
+      <author>George</author>
+      <price>12.66</price>
+    </entree>
+    <entree>
+      <id>7e9fe5c7</id>
+      <title>Frogmen Breaking</title>
+      <author>Bezalel Simmel</author>
+      <price>58.0</price>
+    </entree>
+    <entree>
+      <id>f791a3d5</id>
+      <title>Outbreak</title>
+      <author>Parto Bamford</author>
+      <price>57.23</price>
+    </entree>
+    <entree>
+      <id>566b9ee21</id>
+      <title>amber leaf</title>
+      <author>tobbaco</author>
+      <price>02.2</price>
+    </entree>
+    <entree>
+      <id>566b9ee</id>
+      <title>golden retirever</title>
+      <author>tom</author>
+      <price>130.2</price>
+    </entree>
+    <entree>
+      <id>566b9dee</id>
+      <title>whole nut</title>
+      <author>lidl</author>
+      <price>0.88</price>
+    </entree>
+    <entree>
+      <id>23a5e1f2</id>
+      <title>fff</title>
+      <author>fff</author>
+      <price>fff</price>
+    </entree>
+  </section>
+  <section name="SF">
+    <entree>
+      <id>bcd122ef</id>
+      <title>Young Language</title>
+      <author>Chirstian Koblick</author>
+      <price>23.84</price>
+    </entree>
+    <entree>
+      <id>b33e24c0</id>
+      <title>Stampede Disturbing</title>
+      <author>Kyoichi Maliniak</author>
+      <price>1.22</price>
+    </entree>
+    <entree>
+      <id>566b9ee2</id>
+      <title>World Leathernecks</title>
+      <author>Anneke Preusig</author>
+      <price>0.2</price>
+    </entree>
+    <entree>
+      <id>xxx</id>
+      <title>xxx</title>
+      <author>xxx</author>
+      <price>xxx</price>
+    </entree>
+  </section>
+  <section name="IT">
+    <entree>
+      <id>cbd01062</id>
+      <title>Goodfellas Salute</title>
+      <author>Tzvetan</author>
+      <price>89.56</price>
+    </entree>
+    <entree>
+      <id>8497b23b</id>
+      <title>Core Suit</title>
+      <author>Saniya Kalloufi</author>
+      <price>8.1</price>
+    </entree>
+    <entree>
+      <id>a8f0a23f</id>
+      <title>Knock Warlock</title>
+      <author>Sumant Peac</author>
+      <price>15.65</price>
+    </entree>
+    <entree>
+      <id>37b6b057</id>
+      <title>Dangerous</title>
+      <author>Duangkaew Piveteau</author>
+      <price>65.84</price>
+    </entree>
+    <entree>
+      <id>qqqq</id>
+      <title>qqqq</title>
+      <author>qqqq</author>
+      <price>qqqq</price>
+    </entree>
+  </section>
+</books>
