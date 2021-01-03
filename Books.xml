@@ -20,12 +20,6 @@
       <price>57.23</price>
     </entree>
     <entree>
-      <id>566b9ee21</id>
-      <title>amber leaf</title>
-      <author>tobbaco</author>
-      <price>02.2</price>
-    </entree>
-    <entree>
       <id>566b9ee</id>
       <title>golden retirever</title>
       <author>tom</author>
@@ -38,10 +32,16 @@
       <price>0.88</price>
     </entree>
     <entree>
-      <id>23a5e1f2</id>
-      <title>fff</title>
-      <author>fff</author>
-      <price>fff</price>
+      <id>2876b22e</id>
+      <title>lorem itsum</title>
+      <author>lorem itsum</author>
+      <price>-0.09</price>
+    </entree>
+    <entree>
+      <id>a34fb3ff</id>
+      <title>stackers</title>
+      <author>stackers</author>
+      <price>0.33</price>
     </entree>
   </section>
   <section name="SF">
@@ -64,10 +64,10 @@
       <price>0.2</price>
     </entree>
     <entree>
-      <id>xxx</id>
+      <id>584a6b47</id>
       <title>xxx</title>
-      <author>xxx</author>
-      <price>xxx</price>
+      <author>xxxx</author>
+      <price>0.51</price>
     </entree>
   </section>
   <section name="IT">
@@ -94,12 +94,6 @@
       <title>Dangerous</title>
       <author>Duangkaew Piveteau</author>
       <price>65.84</price>
-    </entree>
-    <entree>
-      <id>qqqq</id>
-      <title>qqqq</title>
-      <author>qqqq</author>
-      <price>qqqq</price>
     </entree>
   </section>
 </books>

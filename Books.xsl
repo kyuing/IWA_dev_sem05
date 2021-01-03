@@ -13,8 +13,9 @@
       <thead>
         <tr>
           <th colspan="5">
+            <!-- may need to asdd name attr for its value to be sent out to CRUD sectin tag -->
             <section class="container d-flex flex-column justify-content-center align-items-center">
-              <span class="mb-2">Select book section</span>
+              <span class="mb-2">Select a book section</span>
               <select onchange="changeSection(value)" class="custom-select col-8">
                 <option value="Fiction">Fiction</option>
                 <option value="SF">SF</option>
@@ -118,7 +119,7 @@
               <xsl:value-of select="boolean(@vegetarian)" />
             </xsl:attribute> -->
                 <td align="center">
-                  <input name="item0" type="checkbox" />
+                  <input name="item0" type="checkbox" disabled="disabled"/>
                 </td>
                 <td>
                   <xsl:value-of select="id" />
@@ -153,7 +154,7 @@
                   <xsl:value-of select="$entreeNum" />
                 </xsl:attribute>
                 <td align="center">
-                  <input name="item0" type="checkbox" />
+                  <input name="item0" type="checkbox" disabled="disabled"/>
                 </td>
                 <td>
                   <xsl:value-of select="id" />
@@ -250,7 +251,7 @@
               <xsl:value-of select="boolean(@vegetarian)" />
             </xsl:attribute> -->
                 <td align="center">
-                  <input name="item0" type="checkbox" />
+                  <input name="item0" type="checkbox" disabled="disabled" />
                 </td>
                 <td>
                   <xsl:value-of select="id" />
@@ -288,7 +289,7 @@
               <xsl:value-of select="boolean(@vegetarian)" />
             </xsl:attribute> -->
                 <td align="center">
-                  <input name="item0" type="checkbox" />
+                  <input name="item0" type="checkbox" disabled="disabled"/>
                 </td>
                 <td>
                   <xsl:value-of select="id" />
@@ -383,7 +384,7 @@
               <xsl:value-of select="boolean(@vegetarian)" />
             </xsl:attribute> -->
                 <td align="center">
-                  <input name="item0" type="checkbox" />
+                  <input name="item0" type="checkbox" disabled="disabled"/>
                 </td>
                 <td>
                   <xsl:value-of select="id" />
@@ -421,7 +422,7 @@
               <xsl:value-of select="boolean(@vegetarian)" />
             </xsl:attribute> -->
                 <td align="center">
-                  <input name="item0" type="checkbox" />
+                  <input name="item0" type="checkbox" disabled="disabled"/>
                 </td>
                 <td>
                   <xsl:value-of select="id" />

@@ -59,7 +59,6 @@ router.post('/post/json', function (req, res) {
     xmlFileToJs('Books.xml', function (err, result) {
       if (err) throw (err);
 
-     
       /**
        * function to generate a random 8-digit hex string 
        * https://codepen.io/code_monk/pen/FvpfI */
@@ -75,7 +74,7 @@ router.post('/post/json', function (req, res) {
         return r;
       };
       const id = generateObjId(8);
-     
+
       result.books.section[obj.sec_n].entree.push(
         {
           // 'id': obj.id,
@@ -96,9 +95,10 @@ router.post('/post/json', function (req, res) {
   appendJSON(req.body);
 
   res.redirect('back');
-  // let msg = "A book has just been created successfully";
-  // alert(msg);
-
+  document.forms[0].id.value = null;
+  document.forms[0].title.value = null;
+  document.forms[0].author.value = null;
+  document.forms[0].price.value = null;
 });
 
 router.post('/post/update', function (req, res) {
@@ -127,6 +127,11 @@ router.post('/post/update', function (req, res) {
   updateJSON(req.body);
 
   res.redirect('back');
+  document.forms[1].entree.value = null;
+  document.forms[1].id.value = null;
+  document.forms[1].title.value = null;
+  document.forms[1].author.value = null;
+  document.forms[1].price.value = null;
 
 });
 

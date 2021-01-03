@@ -29,11 +29,6 @@ table, th, td {
      padding: 0.5rem;
      text-align: left;
 }
-/* #delete {
-     border: 1px solid #ced4da;
-     padding: 0.5rem;
-     
-} */
  th {
      font-weight: bold;
 }
@@ -48,12 +43,7 @@ table #field th {
   background-color: #dc3545;
   color: #FFF;
 }
-
-/* .checked {
-  background-color: unset;  
-  color: #000000;
-  font-weight: bold;
-} */
-
-/* #sectionFiction, #sectionSF, #sectionIT { display: none; } */
+#formUpdate, #delete, #del-text-muted, #formCalcBill, #calc-text-muted {
+     display: none;
+}
 #sectionSF, #sectionIT { display: none; }

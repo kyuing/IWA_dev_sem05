@@ -19,65 +19,172 @@ function select_row() {
 
   $("#menuTable tbody tr[entree]").click(function () {
 
+    let section, entree;
+
     $(".selected").removeClass("selected");
     $(this).addClass("selected");
+    //$(this).addClass("selected").siblings().removeClass("selected");
 
-    // var id = $(this).children.attr("id");
-    let section = $(this).attr("secIndexNum");
-    let entree = $(this).attr("entree") - 1;
+    section = $(this).attr("secIndexNum");
+    entree = $(this).attr("entree") - 1;
+    console.log("section index: " + section);
+    console.log("entree index: " + entree);
+    console.log(".selected: " + $(".selected").closest('tr').text());
 
-    //generate objID if C of CRUD
-    // document.forms[0].id.value = generateObjId(8);
-
-    //getters for updation form
     document.forms[1].entree.value = entree;
     document.forms[1].id.value = $(this).children("TD")[1].innerHTML;
     document.forms[1].title.value = $(this).children("TD")[2].innerHTML;
     document.forms[1].author.value = $(this).children("TD")[3].innerHTML;
     document.forms[1].price.value = $(this).children("TD")[4].innerHTML;
 
-    console.log("section index: " + section);
-    console.log("entree index: " + entree);
-
-    delete_row(section, entree);
-
+    if ($("#CRUD_option").val() == 0 && section != null && entree != null) {
+      $(".selected").removeClass("selected");
+      section = undefined;
+      entree = undefined;
+    }
+    if ($("#CRUD_option").val() == 1 && section != null && entree != null) {
+      section = undefined;
+      entree = undefined;
+    }
+    if ($("#CRUD_option").val() == 2) {
+      delete_row(section, entree);
+    }
   })
 };
 
+
 function delete_row(sec, ent) {
-  $("#delete").click(function () {
-    $.ajax(
-      {
-        url: "/post/delete",
-        type: "POST",
-        data:
+
+  $("#del-sec").val(sec);
+  $("#del-ent").val(ent);
+
+  $("#delete").click(function (e) {
+    e.stopImmediatePropagation();
+    // e.preventDefault();
+
+    // const isConfirmed = confirm("Are you sure you'd like to delete the selected row?")
+    // if (isConfirmed == true) {
+    if ( ($("#del-sec").val().length === 0 && $("#del-ent").val().length === 0) 
+    || $("#del-sec").val().length === 0 || $("#del-ent").val().length === 0) {
+      alert("Nothing selected.\nTo delete a book, please click the required row first.")
+    }else {
+      $.ajax(
         {
-          section: sec,
-          entree: ent
-        },
-        cache: false,
-        success: setTimeout(draw_table, 1000)
-      })
+          url: "/post/delete",
+          type: "POST",
+          data:
+          {
+            section: $("#del-sec").val(),
+            entree: $("#del-ent").val()
+          },
+          cache: false,
+          success: setTimeout(draw_table, 1000),
+        })
+
+    $(".selected").removeClass("selected");
+    $("#del-sec").val($("#del-sec").placeholder);
+    $("#del-ent").val($("#del-ent").placeholder);
+    //e.preventDefault();
+    }
+    //  else {
+    // $(".selected").removeClass("selected");
+    // }
   })
+
 };
 
 $(document).ready(function () {
   draw_table();
 });
 
-// function generateObjId(len) {
-//   var maxlen = 8,
-//     min = Math.pow(16, Math.min(len, maxlen) - 1)
-//   max = Math.pow(16, Math.min(len, maxlen)) - 1,
-//     n = Math.floor(Math.random() * (max - min + 1)) + min,
-//     r = n.toString(16);
-//   while (r.length < len) {
-//     r = r + randHex(len - maxlen);
-//   }
-//   return r;
-// }
+function change_CRUD_option(value) {
+
+  if (value == 0) {
+    $(".selected").removeClass("selected");
+    $('#formCreation').show();
+    $('#formUpdate').hide();
+    $('#delete').hide();
+    $('#formCalcBill').hide();
+    $('#menuTable input[type=checkbox]').attr('disabled', 'true');
+
+    document.forms[0].id.value = null;
+    document.forms[0].title.value = null;
+    document.forms[0].author.value = null;
+    document.forms[0].price.value = null;
+
+    document.forms[1].entree.value = null;
+    document.forms[1].id.value = null;
+    document.forms[1].title.value = null;
+    document.forms[1].author.value = null;
+    document.forms[1].price.value = null;
+  }
+  if (value == 1) {
+    $(".selected").removeClass("selected");
+    $('#formCreation').hide();
+    $('#formUpdate').show();
+    $('#delete').hide();
+    $('#del-text-muted').hide();
+    $('#formCalcBill').hide();
+    $('#menuTable input[type=checkbox]').attr('disabled', 'true');
+
+    document.forms[0].id.value = null;
+    document.forms[0].title.value = null;
+    document.forms[0].author.value = null;
+    document.forms[0].price.value = null;
+
+    document.forms[1].entree.value = null;
+    document.forms[1].id.value = null;
+    document.forms[1].title.value = null;
+    document.forms[1].author.value = null;
+    document.forms[1].price.value = null;
+  }
+  if (value == 2) {
+
+    $('#formCreation').hide();
+    $('#formUpdate').hide();
+    $('#delete').show();
+    $(".selected").removeClass("selected");
+    $('#del-text-muted').show();
+    $('#formCalcBill').hide();
+    $('#menuTable input[type=checkbox]').attr('disabled', 'true');
+
+    document.forms[0].id.value = null;
+    document.forms[0].title.value = null;
+    document.forms[0].author.value = null;
+    document.forms[0].price.value = null;
+
+    document.forms[1].entree.value = null;
+    document.forms[1].id.value = null;
+    document.forms[1].title.value = null;
+    document.forms[1].author.value = null;
+    document.forms[1].price.value = null;
+  }
+  if (value == 3) {
+    $(".selected").removeClass("selected");
+    $('#formCreation').hide();
+    $('#formUpdate').hide();
+    $('#delete').hide();
+    $('#del-text-muted').hide();
+    $('#formCalcBill').show();
+    $('#calc-text-muted').show();
+    $('#menuTable input[type=checkbox]').removeAttr("disabled");
+
+    document.forms[0].id.value = null;
+    document.forms[0].title.value = null;
+    document.forms[0].author.value = null;
+    document.forms[0].price.value = null;
+
+    document.forms[1].entree.value = null;
+    document.forms[1].id.value = null;
+    document.forms[1].title.value = null;
+    document.forms[1].author.value = null;
+    document.forms[1].price.value = null;
+  }
+
+}
 
 function changeSection(value) {
+
   if (value == 'Fiction') {
     console.log(value);
     $('#sectionFiction').show();
@@ -86,7 +193,20 @@ function changeSection(value) {
     document.forms[1].sec_n.value = 0;
     $('#sectionSF').hide();
     $('#sectionIT').hide();
-    // location.reload();
+    $("#del-sec").val($("#del-sec").placeholder);
+    $("#del-ent").val($("#del-ent").placeholder);
+
+    document.forms[0].id.value = null;
+    document.forms[0].title.value = null;
+    document.forms[0].author.value = null;
+    document.forms[0].price.value = null;
+
+    document.forms[1].entree.value = null;
+    document.forms[1].id.value = null;
+    document.forms[1].title.value = null;
+    document.forms[1].author.value = null;
+    document.forms[1].price.value = null;
+
   }
 
   if (value == 'SF') {
@@ -97,7 +217,19 @@ function changeSection(value) {
     document.forms[1].sec_n.value = 1;
     $('#sectionFiction').hide();
     $('#sectionIT').hide();
-    // location.reload();
+    $("#del-sec").val($("#del-sec").placeholder);
+    $("#del-ent").val($("#del-ent").placeholder);
+
+    document.forms[0].id.value = null;
+    document.forms[0].title.value = null;
+    document.forms[0].author.value = null;
+    document.forms[0].price.value = null;
+
+    document.forms[1].entree.value = null;
+    document.forms[1].id.value = null;
+    document.forms[1].title.value = null;
+    document.forms[1].author.value = null;
+    document.forms[1].price.value = null;
   }
 
   if (value == 'IT') {
@@ -108,7 +240,19 @@ function changeSection(value) {
     document.forms[1].sec_n.value = 2;
     $('#sectionFiction').hide();
     $('#sectionSF').hide();
-    // location.reload();
+    $("#del-sec").val($("#del-sec").placeholder);
+    $("#del-ent").val($("#del-ent").placeholder);
+
+    document.forms[0].id.value = null;
+    document.forms[0].title.value = null;
+    document.forms[0].author.value = null;
+    document.forms[0].price.value = null;
+
+    document.forms[1].entree.value = null;
+    document.forms[1].id.value = null;
+    document.forms[1].title.value = null;
+    document.forms[1].author.value = null;
+    document.forms[1].price.value = null;
   }
 };
 
