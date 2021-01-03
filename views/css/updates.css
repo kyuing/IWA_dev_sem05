@@ -1,0 +1,49 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+table, th, td {
+     border-collapse: collapse;
+     border: 1px solid black;
+     text-align: center;
+}
+ table {
+     border-collapse: collapse;
+     width:100%;
+}
+ td, th, .form-group {
+     border: 1px solid #ced4da;
+     padding: 0.5rem;
+     text-align: left;
+}
+ th {
+     font-weight: bold;
+}
+table #field th {
+  background-color:#f2f2f2;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.selected {
+  background-color: #dc3545;
+  color: #FFF;
+}
+#formUpdate, #delete, #del-text-muted, #formCalcBill, #calc-text-muted {
+     display: none;
+}
+#sectionSF, #sectionIT { display: none; }

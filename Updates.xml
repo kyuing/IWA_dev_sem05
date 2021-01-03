@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<updates>
+  <section name="Fiction">
+    <entree/>
+    <entree>
+      <type>CREATED</type>
+      <id>708b22a1</id>
+      <title>aaa</title>
+      <author>aa</author>
+      <price>0.01</price>
+    </entree>
+    <entree>
+      <type>DELETED</type>
+      <id>708b22a1</id>
+      <title>aaa</title>
+      <author>aa</author>
+      <price>0.01</price>
+    </entree>
+  </section>
+  <section name="SF">
+    <entree/>
+    <entree>
+      <type>CREATED</type>
+      <id>13f0b422</id>
+      <title>bbb</title>
+      <author>bbb</author>
+      <price>0.05</price>
+    </entree>
+    <entree>
+      <type>UPDATED</type>
+      <id>584a6b47</id>
+      <title>cool mint</title>
+      <author>cool mint</author>
+      <price>7.77</price>
+    </entree>
+    <entree>
+      <type>DELETED</type>
+      <id>13f0b422</id>
+      <title>bbb</title>
+      <author>bbb</author>
+      <price>0.05</price>
+    </entree>
+  </section>
+  <section name="IT">
+    <entree/>
+    <entree>
+      <type>UPDATED</type>
+      <id>37b6b057</id>
+      <title>very very Dangerous</title>
+      <author>Duangkaew Piveteau</author>
+      <price>150.84</price>
+    </entree>
+  </section>
+</updates>

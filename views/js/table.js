@@ -6,13 +6,13 @@ function draw_table() {
         url: url,
         type: 'GET',
         cache: false,
-        success: function (html) {
-          $("#results").append(html);
+        success: function (main) {
+          $("#results").append(main);
           select_row();
         }
       });
   };
-  $.getJSONuncached("/get/html")
+  $.getJSONuncached("/get/main")
 };
 
 function select_row() {
@@ -21,9 +21,13 @@ function select_row() {
 
     let section, entree;
 
-    $(".selected").removeClass("selected");
-    $(this).addClass("selected");
-    //$(this).addClass("selected").siblings().removeClass("selected");
+    if ($("#CRUD_option").val() == 3) {
+      $(".selected").removeClass("selected");
+    } else {
+      $(".selected").removeClass("selected");
+      $(this).addClass("selected");
+      //$(this).addClass("selected").siblings().removeClass("selected");
+    }
 
     section = $(this).attr("secIndexNum");
     entree = $(this).attr("entree") - 1;
@@ -62,12 +66,10 @@ function delete_row(sec, ent) {
     e.stopImmediatePropagation();
     // e.preventDefault();
 
-    // const isConfirmed = confirm("Are you sure you'd like to delete the selected row?")
-    // if (isConfirmed == true) {
-    if ( ($("#del-sec").val().length === 0 && $("#del-ent").val().length === 0) 
-    || $("#del-sec").val().length === 0 || $("#del-ent").val().length === 0) {
+    if (($("#del-sec").val().length === 0 && $("#del-ent").val().length === 0)
+      || $("#del-sec").val().length === 0 || $("#del-ent").val().length === 0) {
       alert("Nothing selected.\nTo delete a book, please click the required row first.")
-    }else {
+    } else {
       $.ajax(
         {
           url: "/post/delete",
@@ -81,14 +83,10 @@ function delete_row(sec, ent) {
           success: setTimeout(draw_table, 1000),
         })
 
-    $(".selected").removeClass("selected");
-    $("#del-sec").val($("#del-sec").placeholder);
-    $("#del-ent").val($("#del-ent").placeholder);
-    //e.preventDefault();
+      $(".selected").removeClass("selected");
+      $("#del-sec").val($("#del-sec").placeholder);
+      $("#del-ent").val($("#del-ent").placeholder);
     }
-    //  else {
-    // $(".selected").removeClass("selected");
-    // }
   })
 
 };
@@ -106,6 +104,7 @@ function change_CRUD_option(value) {
     $('#delete').hide();
     $('#formCalcBill').hide();
     $('#menuTable input[type=checkbox]').attr('disabled', 'true');
+
 
     document.forms[0].id.value = null;
     document.forms[0].title.value = null;
@@ -168,7 +167,7 @@ function change_CRUD_option(value) {
     $('#formCalcBill').show();
     $('#calc-text-muted').show();
     $('#menuTable input[type=checkbox]').removeAttr("disabled");
-
+   
     document.forms[0].id.value = null;
     document.forms[0].title.value = null;
     document.forms[0].author.value = null;

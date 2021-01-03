@@ -13,7 +13,7 @@
             <section class="container d-flex flex-column justify-content-center align-items-center">
               <span class="mb-2">Select a book section</span>
               <select onchange="changeSection(value)" class="custom-select col-8">
-                <option value="Fiction">Fiction</option>
+                <option value="Fiction" select="selected">Fiction</option>
                 <option value="SF">SF</option>
                 <option value="IT">IT</option>
               </select>
@@ -21,7 +21,7 @@
           </th>
         </tr>
         <tr id="field">
-          <th>Select</th>
+          <th>Update Type</th>
           <th>ID</th>
           <th>Title</th>
           <th>Author</th>
@@ -53,18 +53,16 @@
   </xsl:template>
 
   <xsl:template name="loopFiction">
-    <xsl:variable name="totalNumOfEntreeSize" select="count(/books/section[@name='Fiction']/entree)" />
+    <xsl:variable name="totalNumOfEntreeSize" select="count(/updates/section[@name='Fiction']/entree)" />
     <!-- 
       a quotient can be a decimal. 
       prevent it by returning the smallest integer that is greater than the number argument 
       so that nothing can technically be left, not being assigned into a loadSet  
     -->
     <xsl:variable name="loadSetSize" select="ceiling((number($totalNumOfEntreeSize)) div $size)" />
-    <!-- <p><xsl:value-of select="$loadSetSize" /></p> -->
-
     <xsl:choose>
       <xsl:when test="$loadSet &lt;= $loadSetSize">
-        <xsl:for-each select="/books/section[@name='Fiction']/entree">
+        <xsl:for-each select="/updates/section[@name='Fiction']/entree">
           <xsl:variable name="secIndexNum" select="count(../preceding-sibling::section)" />
           <xsl:variable name="entreeNum" select="position()" />
           <xsl:variable name="start" select="$size * ($loadSet - 1) + 1" />
@@ -84,8 +82,10 @@
                 <xsl:attribute name="entree">
                   <xsl:value-of select="$entreeNum" />
                 </xsl:attribute>
-                <td align="center">
-                  <input name="item0" type="checkbox" disabled="disabled" />
+                <td>
+                  <b>
+                    <xsl:value-of select="type" />
+                  </b>
                 </td>
                 <td>
                   <xsl:value-of select="id" />
@@ -119,8 +119,10 @@
                 <xsl:attribute name="entree">
                   <xsl:value-of select="$entreeNum" />
                 </xsl:attribute>
-                <td align="center">
-                  <input name="item0" type="checkbox" disabled="disabled" />
+                <td>
+                  <b>
+                    <xsl:value-of select="type" />
+                  </b>
                 </td>
                 <td>
                   <xsl:value-of select="id" />
@@ -138,14 +140,15 @@
             </xsl:if>
           </xsl:if>
         </xsl:for-each>
-          <xsl:call-template name="loopFiction">
-            <xsl:with-param name="loadSet" select="$loadSet + 1" />
-          </xsl:call-template>
+
+        <xsl:call-template name="loopFiction">
+          <xsl:with-param name="loadSet" select="$loadSet + 1" />
+        </xsl:call-template>
       </xsl:when>
       <xsl:otherwise>
         <tr>
           <td colspan="5">
-            <button id="loadMore" onclick="loadMore(sectionFiction)" class="btn btn-info btn-block mt-3">Load More</button>
+            <button id="loadMore" onclick="loadMore(sectionFiction)" class="btn btn-info btn-block mt-3" >Load More</button>
           </td>
         </tr>
       </xsl:otherwise>
@@ -153,7 +156,7 @@
   </xsl:template>
 
   <xsl:template name="loopSF">
-    <xsl:variable name="totalNumOfEntreeSize" select="count(/books/section[@name='SF']/entree)" />
+    <xsl:variable name="totalNumOfEntreeSize" select="count(/updates/section[@name='SF']/entree)" />
     <!-- 
       a quotient can be a decimal. 
       prevent it by returning the smallest integer that is greater than the number argument 
@@ -165,7 +168,7 @@
     <xsl:choose>
       <xsl:when test="$loadSet &lt;= $loadSetSize">
 
-        <xsl:for-each select="/books/section[@name='SF']/entree">
+        <xsl:for-each select="/updates/section[@name='SF']/entree">
           <xsl:variable name="secIndexNum" select="count(../preceding-sibling::section)" />
           <xsl:variable name="entreeNum" select="position()" />
           <xsl:variable name="start" select="$size * ($loadSet - 1) + 1" />
@@ -186,8 +189,10 @@
                 <xsl:attribute name="entree">
                   <xsl:value-of select="$entreeNum" />
                 </xsl:attribute>
-                <td align="center">
-                  <input name="item0" type="checkbox" disabled="disabled" />
+                <td>
+                  <b>
+                    <xsl:value-of select="type" />
+                  </b>
                 </td>
                 <td>
                   <xsl:value-of select="id" />
@@ -221,8 +226,10 @@
                 <xsl:attribute name="entree">
                   <xsl:value-of select="$entreeNum" />
                 </xsl:attribute>
-                <td align="center">
-                  <input name="item0" type="checkbox" disabled="disabled" />
+                <td>
+                  <b>
+                    <xsl:value-of select="type" />
+                  </b>
                 </td>
                 <td>
                   <xsl:value-of select="id" />
@@ -256,7 +263,7 @@
   </xsl:template>
 
   <xsl:template name="loopIT">
-    <xsl:variable name="totalNumOfEntreeSize" select="count(/books/section[@name='IT']/entree)" />
+    <xsl:variable name="totalNumOfEntreeSize" select="count(/updates/section[@name='IT']/entree)" />
     <!-- 
       a quotient can be a decimal. 
       prevent it by returning the smallest integer that is greater than the number argument 
@@ -267,7 +274,7 @@
     <xsl:choose>
       <xsl:when test="$loadSet &lt;= $loadSetSize">
 
-        <xsl:for-each select="/books/section[@name='IT']/entree">
+        <xsl:for-each select="/updates/section[@name='IT']/entree">
           <xsl:variable name="secIndexNum" select="count(../preceding-sibling::section)" />
           <xsl:variable name="entreeNum" select="position()" />
           <xsl:variable name="start" select="$size * ($loadSet - 1) + 1" />
@@ -288,8 +295,10 @@
                 <xsl:attribute name="entree">
                   <xsl:value-of select="$entreeNum" />
                 </xsl:attribute>
-                <td align="center">
-                  <input name="item0" type="checkbox" disabled="disabled" />
+                <td>
+                  <b>
+                    <xsl:value-of select="type" />
+                  </b>
                 </td>
                 <td>
                   <xsl:value-of select="id" />
@@ -323,8 +332,10 @@
                 <xsl:attribute name="entree">
                   <xsl:value-of select="$entreeNum" />
                 </xsl:attribute>
-                <td align="center">
-                  <input name="item0" type="checkbox" disabled="disabled" />
+                <td>
+                  <b>
+                    <xsl:value-of select="type" />
+                  </b>
                 </td>
                 <td>
                   <xsl:value-of select="id" />

@@ -31,15 +31,12 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Main
+            <a class="nav-link" href="./index.html">Main
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">To-do list</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Current updates</a>
+            <a class="nav-link" href="./updates.html">Current updates</a>
           </li>
         </ul>
       </div>
@@ -71,8 +68,8 @@
               <input style="display:none;" class="form-control mt-3" type="text" name="sec_n" placeholder="sec_n" value="0" readonly>
               <input class="form-control mt-3" type="text" name="title" placeholder="Title" required>
               <input class="form-control mt-3" type="text" name="author" placeholder="Author" required>
-              <input class="form-control mt-3" type="number" name="price" placeholder="Price" step='0.01' value='0.00'
-                pattern="\d+" min="0" required>
+              <input class="form-control mt-3" type="number" name="price" placeholder="Price" step='0.01'
+                pattern="\d+" min="0" max="200" required>
               <button type="submit" class="btn btn-primary btn-block mt-3">Submit</button>
             </div>
             <p class="text-muted" id="cre-text-muted">To create a book, fill the input</p>
@@ -86,7 +83,7 @@
               <input class="form-control mt-3" type="text" name="title" placeholder="Title" required>
               <input class="form-control mt-3" type="text" name="author" placeholder="Author" required>
               <input class="form-control mt-3" type="number" name="price" placeholder="Price" step='0.01' value='0.00'
-                pattern="\d+" min="0" required>
+                pattern="\d+" min="0" max="200" required>
               <button type="submit" class="btn btn-primary btn-block mt-3">Submit</button>
             </div>
             <p class="text-muted" id="up-text-muted">To update a book, click the required row first</p>
@@ -104,17 +101,9 @@
               <div class="input-group-prepend">
                 <span class="input-group-text">&euro;</span>
               </div>
-              <input type="text" class="form-control" aria-label="Total" name="txtBillAmt" />
-
-              <div class="input-group-append">
-                <div class="input-group-text">
-                  <input type="checkbox" id="showVeg" aria-label="Checkbox for following text input"
-                    title="click to highlight Vegetarian menu" />
-                </div>
-              </div>
-
+              <input type="text" class="form-control" aria-label="Total" name="txtBillAmt" id="txtBillAmt" readonly/>
               <input class="btn btn-block btn-secondary" type="button" name="btnCalcBill" value="Calculate Bill"
-                id="calcBill" />
+                id="calcBill">
               <p class="text-muted" id="calc-text-muted">To calculate biils,<br>tick the check box on the required rows
                 first</p>
             </div>
@@ -136,7 +125,7 @@
   <script src="./js/bootstrap.bundle.min.js"></script>
   <!-- <script src="./js/bootstrap.bundle.min.js.map"></script> -->
   <!-- <script src="./js/jquery.min.map"></script> -->
-  <script src="./js/PaddysBookWarehouse.js"></script>
+  <script src="./js/calcBills.js"></script>
   <script src="./js/table.js"></script>
 
 

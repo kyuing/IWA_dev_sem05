@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<books>
+  <section name="Fictions">
+    <entree>
+      <id>d5b6e598</id>
+      <title>Hunger Roof</title>
+      <author>Georgi Facello</author>
+      <price>5.77</price>
+    </entree>
+    <entree>
+      <id>ee5e7a3</id>
+      <title>Frogmen Breaking</title>
+      <author>Bezalel Simmel</author>
+      <price>58.02</price>
+    </entree>
+    <entree>
+      <id>90013bb5</id>
+      <title>Outbreak Divine</title>
+      <author>Parto Bamford</author>
+      <price>12.65</price>
+    </entree>
+    <entree>
+      <id>89a5a337</id>
+      <title>Young Language</title>
+      <author>Chirstian Koblick</author>
+      <price>25.44</price>
+    </entree>
+    <entree>
+      <id>d73ed7b6</id>
+      <title>Stampede Disturbing</title>
+      <author>Kyoichi Maliniak</author>
+      <price>27.0</price>
+    </entree>
+    <entree>
+      <id>90a1860c</id>
+      <title>World Leathernecks</title>
+      <author>Anneke Preusig</author>
+      <price>32.79</price>
+    </entree>
+    <entree>
+      <id>d793d1c3</id>
+      <title>Goodfellas Salute</title>
+      <author>Tzvetan Zielinski</author>
+      <price>56.39</price>
+    </entree>
+    <entree>
+      <id>1c35ed6c</id>
+      <title>Core Suit</title>
+      <author>Saniya Kalloufi</author>
+      <price>28.06</price>
+    </entree>
+    <entree>
+      <id>8483018e</id>
+      <title>Knock Warlock</title>
+      <author>Sumant Peac</author>
+      <price>87.94</price>
+    </entree>
+    <entree>
+      <id>25f0f8bb</id>
+      <title>Dangerous Uptown</title>
+      <author>Duangkaew Piveteau</author>
+      <price>5.36</price>
+    </entree>
+    <entree>
+      <id>443c0548</id>
+      <title>Chocolate Duck</title>
+      <author>Mary Sluis</author>
+      <price>58.78</price>
+    </entree>
+    <entree>
+      <id>9210b77b</id>
+      <title>Heavyweights Beast</title>
+      <author>Patricio Bridgland</author>
+      <price>39.2</price>
+    </entree>
+    <entree>
+      <id>1a6d4fa9</id>
+      <title>Trap Guys</title>
+      <author>Eberhardt Terkki</author>
+      <price>44.48</price>
+    </entree>
+    <entree>
+      <id>f91fd21d</id>
+      <title>Grail Frankenstein</title>
+      <author>Berni Genin</author>
+      <price>100.0</price>
+    </entree>
+    <entree>
+      <id>9d4e6bb7</id>
+      <title>Wisdom Worker</title>
+      <author>Guoxiang Nooteboom</author>
+      <price>5.39</price>
+    </entree>
+    <entree>
+      <id>b6ebcda1</id>
+      <title>Divorce Shining</title>
+      <author>Kazuhito Cappelletti</author>
+      <price>76.02</price>
+    </entree>
+    <entree>
+      <id>f4703bf4</id>
+      <title>Groove Fiction</title>
+      <author>Cristinel Bouloucos</author>
+      <price>59.18</price>
+    </entree>
+    <entree>
+      <id>ac5ffa95</id>
+      <title>Pet Haunting</title>
+      <author>Kazuhide Peha</author>
+      <price>14.9</price>
+    </entree>
+    <entree>
+      <id>566b7054</id>
+      <title>Network Peak</title>
+      <author>Lillian Haddadi</author>
+      <price>98.0</price>
+    </entree>
+    <entree>
+      <id>ad2b4175</id>
+      <title>Forever Candidate</title>
+      <author>Mayuko Warwick</author>
+      <price>72.42</price>
+    </entree>
+    <entree>
+      <id>3cd7de57</id>
+      <title>Comforts Rush</title>
+      <author>Ramzi Erde</author>
+      <price>100.7</price>
+    </entree>
+    <entree>
+      <id>94a9e9ac</id>
+      <title>Closer Bang</title>
+      <author>Shahaf Famili</author>
+      <price>11.78</price>
+    </entree>
+    <entree>
+      <id>d29d577f</id>
+      <title>Titans Jerk</title>
+      <author>Bojan Montemayor</author>
+      <price>24.61</price>
+    </entree>
+    <entree>
+      <id>a402c795</id>
+      <title>Menagerie Rushmore</title>
+      <author>Suzette Pettey</author>
+      <price>6.36</price>
+    </entree>
+    <entree>
+      <id>94c9c0ed</id>
+      <title>Sweet Brotherhood</title>
+      <author>Prasadram Heyers</author>
+      <price>49.19</price>
+    </entree>
+    <entree>
+      <id>9bd274ee</id>
+      <title>Graffiti Love</title>
+      <author>Yongqiao Berztiss</author>
+      <price>81.74</price>
+    </entree>
+    <entree>
+      <id>d5318b5d</id>
+      <title>Chariots Conspiracy</title>
+      <author>Divier Reistad</author>
+      <price>20.83</price>
+    </entree>
+    <entree>
+      <id>471f7b9f</id>
+      <title>Lights Deer</title>
+      <author>Domenick Tempesti</author>
+      <price>55.42</price>
+    </entree>
+    <entree>
+      <id>cfd5b110</id>
+      <title>Ridgemont Submarine</title>
+      <author>Otmar Herbst</author>
+      <price>15.89</price>
+    </entree>
+    <entree>
+      <id>63dd1b7e</id>
+      <title>Behavior Runaway</title>
+      <author>Elvis Demeyer</author>
+      <price>73.42</price>
+    </entree>
+    <entree>
+      <id>6cb5e4e9</id>
+      <title>Crooked Frogmen</title>
+      <author>Karsten Joslin</author>
+      <price>68.66</price>
+    </entree>
+    <entree>
+      <id>cd8dabe</id>
+      <title>Connecticut Tramp</title>
+      <author>Jeong Reistad</author>
+      <price>48.39</price>
+    </entree>
+    <entree>
+      <id>a93392b0</id>
+      <title>Won Dares</title>
+      <author>Arif Merlo</author>
+      <price>28.03</price>
+    </entree>
+    <entree>
+      <id>68969c69</id>
+      <title>Mob Duffel</title>
+      <author>Bader Swan</author>
+      <price>37.92</price>
+    </entree>
+    <entree>
+      <id>23d0f454</id>
+      <title>Waterfront Deliverance</title>
+      <author>Alain Chappelet</author>
+      <price>82.96</price>
+    </entree>
+    <entree>
+      <id>29b5a802</id>
+      <title>Reunion Witches</title>
+      <author>Adamantios Portugali</author>
+      <price>10.82</price>
+    </entree>
+    <entree>
+      <id>32835db7</id>
+      <title>Gilmore Boiled</title>
+      <author>Pradeep Makrucki</author>
+      <price>7.14</price>
+    </entree>
+    <entree>
+      <id>f1f51e08</id>
+      <title>Vertigo Northwest</title>
+      <author>Huan Lortz</author>
+      <price>20.55</price>
+    </entree>
+    <entree>
+      <id>6df7b411</id>
+      <title>Pulp Beverly</title>
+      <author>Alejandro Brender</author>
+      <price>51.17</price>
+    </entree>
+    <entree>
+      <id>ceeb7027</id>
+      <title>Ending Crowds</title>
+      <author>Weiyi Meriste</author>
+      <price>86.99</price>
+    </entree>
+  </section>
+  <section name="SF">
+    <entree>
+      <id>7293c58f</id>
+      <title>Undefeated Dalmations</title>
+      <author>Uri Lenart</author>
+      <price>86.29</price>
+    </entree>
+    <entree>
+      <id>9fd083e0</id>
+      <title>Garden Island</title>
+      <author>Magy Stamatiou</author>
+      <price>91.25</price>
+    </entree>
+    <entree>
+      <id>aaa9a3f7</id>
+      <title>Noon Papi</title>
+      <author>Yishay Tzvieli</author>
+      <price>81.64</price>
+    </entree>
+    <entree>
+      <id>66651cbc</id>
+      <title>Seven Swarm</title>
+      <author>Mingsen Casley</author>
+      <price>81.09</price>
+    </entree>
+    <entree>
+      <id>3c6c8088</id>
+      <title>Requiem Tycoon</title>
+      <author>Moss Shanbhogue</author>
+      <price>70.48</price>
+    </entree>
+    <entree>
+      <id>70b7b523</id>
+      <title>Musketeers Wait</title>
+      <author>Lucien Rosenbaum</author>
+      <price>43.6</price>
+    </entree>
+    <entree>
+      <id>261095fa</id>
+      <title>Hunchback Impossible</title>
+      <author>Zvonko Nyanchama</author>
+      <price>37.14</price>
+    </entree>
+    <entree>
+      <id>bf4af2ed</id>
+      <title>Bingo Talented</title>
+      <author>Florian Syrotiuk</author>
+      <price>54.57</price>
+    </entree>
+    <entree>
+      <id>fb9eca30</id>
+      <title>Money Harold</title>
+      <author>Basil Tramer</author>
+      <price>47.88</price>
+    </entree>
+    <entree>
+      <id>33b042cd</id>
+      <title>Run Pacific</title>
+      <author>Yinghua Dredge</author>
+      <price>47.97</price>
+    </entree>
+    <entree>
+      <id>81bcabf5</id>
+      <title>Coneheads Smoochy</title>
+      <author>Hidefumi Caine</author>
+      <price>50.42</price>
+    </entree>
+    <entree>
+      <id>f8207018</id>
+      <title>Sugar Wonka</title>
+      <author>Heping Nitsch</author>
+      <price>7.2</price>
+    </entree>
+    <entree>
+      <id>1753335a</id>
+      <title>Terminator Club</title>
+      <author>Sanjiv Zschoche</author>
+      <price>92.33</price>
+    </entree>
+    <entree>
+      <id>dea18e41</id>
+      <title>Fantasy Troopers</title>
+      <author>Mayumi Schueller</author>
+      <price>76.24</price>
+    </entree>
+    <entree>
+      <id>f16762d</id>
+      <title>Name Detective</title>
+      <author>Georgy Dredge</author>
+      <price>17.31</price>
+    </entree>
+    <entree>
+      <id>e950cc14</id>
+      <title>Gunfighter Mussolini</title>
+      <author>Brendon Bernini</author>
+      <price>77.5</price>
+    </entree>
+    <entree>
+      <id>3d7b9b59</id>
+      <title>Wind Phantom</title>
+      <author>Ebbe Callaway</author>
+      <price>62.95</price>
+    </entree>
+    <entree>
+      <id>c0b8fbab</id>
+      <title>Airplane Sierra</title>
+      <author>Berhard McFarlin</author>
+      <price>81.57</price>
+    </entree>
+    <entree>
+      <id>afe53ec8</id>
+      <title>Rugrats Shakespeare</title>
+      <author>Alejandro McAlpine</author>
+      <price>45.53</price>
+    </entree>
+    <entree>
+      <id>23c7c8c</id>
+      <title>Date Speed</title>
+      <author>Breannda Billingsley</author>
+      <price>62.78</price>
+    </entree>
+    <entree>
+      <id>65689738</id>
+      <title>Translation Summer</title>
+      <author>Tse Herber</author>
+      <price>45.64</price>
+    </entree>
+    <entree>
+      <id>e4cfbb63</id>
+      <title>Hamlet Wisdom</title>
+      <author>Anoosh Peyn</author>
+      <price>30.14</price>
+    </entree>
+    <entree>
+      <id>8e3b1365</id>
+      <title>Disciple Mother</title>
+      <author>Gino Leonhardt</author>
+      <price>17.92</price>
+    </entree>
+    <entree>
+      <id>90ac38e5</id>
+      <title>Tracy Cider</title>
+      <author>Udi Jansch</author>
+      <price>89.13</price>
+    </entree>
+    <entree>
+      <id>3831107c</id>
+      <title>Strictly Scarface</title>
+      <author>Satosi Awdeh</author>
+      <price>12.2</price>
+    </entree>
+    <entree>
+      <id>ba7002b6</id>
+      <title>Anthem Luke</title>
+      <author>Kwee Schusler</author>
+      <price>78.15</price>
+    </entree>
+    <entree>
+      <id>4e3d64b8</id>
+      <title>Home Pity</title>
+      <author>Claudi Stavenow</author>
+      <price>77.3</price>
+    </entree>
+    <entree>
+      <id>5d2ba3d2</id>
+      <title>Suit Walls</title>
+      <author>Charlene Brattka</author>
+      <price>96.2</price>
+    </entree>
+    <entree>
+      <id>f7ecaa5d</id>
+      <title>Memento Zoolander</title>
+      <author>Margareta Bierman</author>
+      <price>34.3</price>
+    </entree>
+    <entree>
+      <id>d252cccd</id>
+      <title>Jumping Wrath</title>
+      <author>Reuven Garigliano</author>
+      <price>34.57</price>
+    </entree>
+  </section>
+  <section name="IT">
+    <entree>
+      <id>a10c3c98</id>
+      <title>Arabia Dogma</title>
+      <author>Hisao Lipner</author>
+      <price>75.12</price>
+    </entree>
+    <entree>
+      <id>3e0abfcd</id>
+      <title>Born Spinal</title>
+      <author>Hironoby Sidou</author>
+      <price>85.99</price>
+    </entree>
+    <entree>
+      <id>bd435dcc</id>
+      <title>Stepmom Dream</title>
+      <author>Shir McClurg</author>
+      <price>90.08</price>
+    </entree>
+    <entree>
+      <id>2a77a105</id>
+      <title>Miracle Virtual</title>
+      <author>Mokhtar Bernatsky</author>
+      <price>84.74</price>
+    </entree>
+    <entree>
+      <id>8262f38d</id>
+      <title>Youth Kick</title>
+      <author>Gao Dolinsky</author>
+      <price>15.96</price>
+    </entree>
+    <entree>
+      <id>7ce9f84e</id>
+      <title>Blindness Gun</title>
+      <author>Erez Ritzmann</author>
+      <price>76.92</price>
+    </entree>
+    <entree>
+      <id>18e8217a</id>
+      <title>Exorcist Sting</title>
+      <author>Mona Azuma</author>
+      <price>68.89</price>
+    </entree>
+    <entree>
+      <id>790cd832</id>
+      <title>Destiny Saturday</title>
+      <author>Danel Mondadori</author>
+      <price>50.98</price>
+    </entree>
+    <entree>
+      <id>ec1bfd83</id>
+      <title>Magic Mallrats</title>
+      <author>Kshitij Gils</author>
+      <price>11.54</price>
+    </entree>
+    <entree>
+      <id>87cf8611</id>
+      <title>Thief Pelican</title>
+      <author>Premal Baek</author>
+      <price>19.37</price>
+    </entree>
+    <entree>
+      <id>410047aa</id>
+      <title>Instinct Airport</title>
+      <author>Zhongwei Rosen</author>
+      <price>62.07</price>
+    </entree>
+    <entree>
+      <id>6aa2e23f</id>
+      <title>Darkness War</title>
+      <author>Parviz Lortz</author>
+      <price>90.88</price>
+    </entree>
+    <entree>
+      <id>6fadd736</id>
+      <title>Pickup Driving</title>
+      <author>Vishv Zockler</author>
+      <price>93.27</price>
+    </entree>
+    <entree>
+      <id>be88b4cb</id>
+      <title>Panky Submarine</title>
+      <author>Tuval Kalloufi</author>
+      <price>94.44</price>
+    </entree>
+    <entree>
+      <id>a0743b21</id>
+      <title>Congeniality Quest</title>
+      <author>Kenroku Malabarba</author>
+      <price>57.45</price>
+    </entree>
+    <entree>
+      <id>410b4ca2</id>
+      <title>Horror Reign</title>
+      <author>Somnath Foote</author>
+      <price>81.23</price>
+    </entree>
+    <entree>
+      <id>7aadc543</id>
+      <title>Stagecoach Armageddon</title>
+      <author>Xinglin Eugenio</author>
+      <price>32.3</price>
+    </entree>
+    <entree>
+      <id>173e0d47</id>
+      <title>Kill Brotherhood</title>
+      <author>Jungsoon Syrzycki</author>
+      <price>66.82</price>
+    </entree>
+    <entree>
+      <id>2c147176</id>
+      <title>Ferris Mother</title>
+      <author>Sudharsan Flasterstein</author>
+      <price>91.69</price>
+    </entree>
+    <entree>
+      <id>aed77b7e</id>
+      <title>Twisted Pirates</title>
+      <author>Kendra Hofting</author>
+      <price>85.94</price>
+    </entree>
+    <entree>
+      <id>7057b17e</id>
+      <title>Fish Opus</title>
+      <author>Amabile Gomatam</author>
+      <price>53.29</price>
+    </entree>
+    <entree>
+      <id>2d1a7eb4</id>
+      <title>Dumbo Lust</title>
+      <author>Valdiodio Niizuma</author>
+      <price>86.36</price>
+    </entree>
+    <entree>
+      <id>5142f526</id>
+      <title>Usual Untouchables</title>
+      <author>Sailaja Desikan</author>
+      <price>38.41</price>
+    </entree>
+    <entree>
+      <id>bf58189c</id>
+      <title>Camelot Vacation</title>
+      <author>Arumugam Ossenbruggen</author>
+      <price>99.54</price>
+    </entree>
+    <entree>
+      <id>726a61c5</id>
+      <title>Jerk Paycheck</title>
+      <author>Hilari Morton</author>
+      <price>13.91</price>
+    </entree>
+    <entree>
+      <id>5573c118</id>
+      <title>Microcosmos Paradise</title>
+      <author>Jayson Mandell</author>
+      <price>35.76</price>
+    </entree>
+    <entree>
+      <id>78c6ef6a</id>
+      <title>Mallrats United</title>
+      <author>Remzi Waschkowski</author>
+      <price>8.28</price>
+    </entree>
+    <entree>
+      <id>d9f9440e</id>
+      <title>Princess Giant</title>
+      <author>Sreekrishna Servieres</author>
+      <price>14.39</price>
+    </entree>
+    <entree>
+      <id>57e04755</id>
+      <title>Hotel Happiness</title>
+      <author>Valter Sullins</author>
+      <price>21.71</price>
+    </entree>
+    <entree>
+      <id>65392618</id>
+      <title>Odds Boogie</title>
+      <author>Hironobu Haraldson</author>
+      <price>75.75</price>
+    </entree>
+  </section>
+</books>

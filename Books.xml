@@ -65,9 +65,9 @@
     </entree>
     <entree>
       <id>584a6b47</id>
-      <title>xxx</title>
-      <author>xxxx</author>
-      <price>0.51</price>
+      <title>cool mint</title>
+      <author>cool mint</author>
+      <price>7.77</price>
     </entree>
   </section>
   <section name="IT">
@@ -91,9 +91,9 @@
     </entree>
     <entree>
       <id>37b6b057</id>
-      <title>Dangerous</title>
+      <title>very very Dangerous</title>
       <author>Duangkaew Piveteau</author>
-      <price>65.84</price>
+      <price>150.84</price>
     </entree>
   </section>
 </books>
