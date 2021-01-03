@@ -59,8 +59,23 @@ router.get('/get/updates', function (req, res) {
 
 router.post('/post/json', function (req, res) {
 
-  let id = '';
-  let idCopied = '';
+  /**
+    * function to generate a random 8-digit hex string 
+    * https://codepen.io/code_monk/pen/FvpfI */
+  const generateObjId = function (len) {
+    var maxlen = 8,
+      min = Math.pow(16, Math.min(len, maxlen) - 1)
+    max = Math.pow(16, Math.min(len, maxlen)) - 1,
+      n = Math.floor(Math.random() * (max - min + 1)) + min,
+      r = n.toString(16);
+    while (r.length < len) {
+      r = r + randHex(len - maxlen);
+    }
+    return r;
+  };
+
+  let id = generateObjId(8);
+  let idCopied = id;
 
   function appendJSON(obj) {
 
@@ -69,25 +84,8 @@ router.post('/post/json', function (req, res) {
     xmlFileToJs('Books.xml', function (err, result) {
       if (err) throw (err);
 
-      /**
-       * function to generate a random 8-digit hex string 
-       * https://codepen.io/code_monk/pen/FvpfI */
-      const generateObjId = function (len) {
-        var maxlen = 8,
-          min = Math.pow(16, Math.min(len, maxlen) - 1)
-        max = Math.pow(16, Math.min(len, maxlen)) - 1,
-          n = Math.floor(Math.random() * (max - min + 1)) + min,
-          r = n.toString(16);
-        while (r.length < len) {
-          r = r + randHex(len - maxlen);
-        }
-        return r;
-      };
-      id = generateObjId(8);
-      idCopied = id;
       result.books.section[obj.sec_n].entree.push(
         {
-          // 'id': obj.id,
           'id': id,
           'title': obj.title,
           'author': obj.author,
@@ -128,13 +126,12 @@ router.post('/post/json', function (req, res) {
     });
   };
   appendJSONToCurrUpdate(req.body);
-  idCopied = '';
 
 });
 
 router.post('/post/update', function (req, res) {
 
-  let idCopied = '';
+  //let idCopied = '';  //sometimes work and not working
 
   function updateJSON(obj) {
 
@@ -144,8 +141,11 @@ router.post('/post/update', function (req, res) {
     xmlFileToJs('Books.xml', function (err, result) {
       if (err) throw (err);
 
-      idCopied = obj.id;
-      //result.books.section[obj.sec_n].entree[obj.entree]['id'] = obj.id;
+      // idCopied = obj.id; //sometimes work and not working
+
+      /* no need to update id since section index and entree index are specified*/
+      //result.books.section[obj.sec_n].entree[obj.entree]['id'] = obj.id;  
+
       result.books.section[obj.sec_n].entree[obj.entree]['title'] = obj.title;
       result.books.section[obj.sec_n].entree[obj.entree]['author'] = obj.author;
       result.books.section[obj.sec_n].entree[obj.entree]['price'] = obj.price;
@@ -172,7 +172,8 @@ router.post('/post/update', function (req, res) {
       result.updates.section[obj.sec_n].entree.push(
         {
           'type': "UPDATED",
-          'id': idCopied,
+          'id': obj.id,
+          // 'id': idCopied,  //sometimes work and not working
           'title': obj.title,
           'author': obj.author,
           'price': obj.price
@@ -186,13 +187,31 @@ router.post('/post/update', function (req, res) {
     });
   };
   appendJSONToCurrUpdate(req.body);
-  idCopied = '';
 
 });
 
 router.post('/post/delete', function (req, res) {
 
-  let id = '', title = '', author = '', price = '';
+  /**
+   * Deletion based on Books.xml(the main xml file) works fine
+   * However, some issuees found related to recording rows into Updates.xml.
+   * 
+   * The logic is supposed to do the following tasks:
+   * - take values on a row selected in Books.xml and the values are stored into variables below
+   *   before a deletion executed 
+   * - then, the deletion is executed 
+   *   and then push the deleted row -whose values are stored in advance- into Updates.xml
+   * 
+   * So the problem is that it works and also doesn't work sometimes
+   * whether initializing variables below or not.
+   * 
+   * Three phases found when sending the deleted values into Update.xml:
+   * - a row recorded successfully
+   * - a row recofrded but <td> values are empyty
+   * - nothing recorded
+   */
+  let id, title, author, price;
+  // let id = '', title = '', author = '', price = '';
 
   function deleteJSON(obj) {
 
@@ -206,7 +225,7 @@ router.post('/post/delete', function (req, res) {
       title = result.books.section[obj.section].entree[obj.entree]['title'];
       author = result.books.section[obj.section].entree[obj.entree]['author'];
       price = result.books.section[obj.section].entree[obj.entree]['price'];
-      
+
       delete result.books.section[obj.section].entree[obj.entree];
       console.log(JSON.stringify(result, null, "  "));
 
@@ -245,7 +264,7 @@ router.post('/post/delete', function (req, res) {
   };
 
   appendJSONToCurrUpdate(req.body);
-  id = '', title = '', author = '', price = '';
+  // id = '', title = '', author = '', price = '';
 
 });
 

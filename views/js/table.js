@@ -59,6 +59,8 @@ function select_row() {
 
 function delete_row(sec, ent) {
 
+  //onclick function below, keeps taking one previous values passed if cllcking row more than once. 
+  //so, used raw values at doc level using input tag
   $("#del-sec").val(sec);
   $("#del-ent").val(ent);
 
